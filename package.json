@@ -1,0 +1,25 @@
+{
+   "name": "varnish-ssh",
+   "types": ["pack"],
+   "version": "0.1",
+   "homepage": "https://github.com/gkoumantaris/varnish-ssh",
+   "author": "Georgios Koumantaris",
+   "description": "varnish checks based on ssh",
+   "contributors": [
+      {
+         "name": "Georgios Koumantaris",
+         "email": "gkoumantaris@gmail.com"
+      }
+   ],
+   "repository": "https://github.com/gkoumantaris/varnish-ssh.git",
+   "keywords": [
+      "pack",
+      "linux",
+      "varnish"
+      "ssh"
+   ],
+   "dependencies": {
+      "shinken": ">=1.4"
+   },
+   "license": "AGPL"
+}
