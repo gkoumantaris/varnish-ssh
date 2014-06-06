@@ -110,6 +110,9 @@ if __name__ == '__main__':
     # Ok now connect, and try to get values for memory
     client = schecks.connect(hostname, port, ssh_key_file, passphrase, user)
     statistics = get_stats(client)
-    perfdata = statistics
-    print perfdata
+    perfdata = ''
+    for i in range(len(statistics)):
+        statistics[i]=statistics[i].replace("   ","=")  
+    perfdata += ' '.join(statistics)
+    print "OK | %s" % (perfdata)
     sys.exit(0)
