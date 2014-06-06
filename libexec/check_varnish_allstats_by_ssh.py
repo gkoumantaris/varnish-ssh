@@ -56,7 +56,7 @@ VERSION = "0.1"
 
 def get_stats(client):
     # We are looking for varnish statistics
-    raw = r"""echo "$(varnishstat -1 | awk '{print $1, " ", $3}')" """  
+    raw = r"""echo "$(varnishstat -1 -f client_conn,client_drop,client_req,cache_hit,cache_miss,backend_conn,backend_unhealthy,backend_fail,backend_busy,n_object,n_wrk,n_wrk_failed,n_lru_nuked,fetch_failed | awk '{print $1, " ", $3}')" """  
     stdin, stdout, stderr = client.exec_command(raw)
     stdin.close()
     stats = []
