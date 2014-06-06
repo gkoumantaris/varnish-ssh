@@ -15,7 +15,7 @@
    "keywords": [
       "pack",
       "linux",
-      "varnish"
+      "varnish",
       "ssh"
    ],
    "dependencies": {
